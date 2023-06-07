@@ -59,7 +59,7 @@ function Invoke-Parallel {
   $Parallel.RuntimeLimit = $RuntimeLimit
   $Parallel.CycleTime = $CycleTime
   $Parallel.Progress  = !$Quiet
-  $Parallel.invokeParallel($InputScript, $InputObject, $InputParam, $Parameters)
+  $Parallel.invokeParallel($InputObject, $InputParam, $Parameters, $InputScript)
   if ($Raw) {
     $Parallel.dispose()
     return
